@@ -1,0 +1,101 @@
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: $fontppal;
+    line-height: 1.2;
+    background: $color-light;
+    display: block;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: $font-500;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: $fontsecundary;
+    font-size: $font-40;
+}
+
+section {
+    margin-top: 8rem;
+    height: 100vh;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+    color: $color-white;
+}
+
+section > h2 {
+    color: $color-ppal;
+    margin-bottom: 3rem;
+}
+
+
+a {
+    color: $color-dark;
+    transition: $transition;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $color-secu;
+}
+
+.container{
+    width: $width-lg;
+    will-change: contents;
+    margin: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: $color-dark;
+    padding: 0.3rem 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid $color-dark;
+    transition: $transition;
+}
+
+.btn:hover {
+    background-color: $color-secu;
+    color: $color-white;
+    border-color: transparent;
+}
+
+.btn-primary {
+    background-color: $color-dark;
+    color: $color-white;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.loader-active {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    animation: fadeOut 2s 1s;
+    animation-fill-mode: forwards;
+}

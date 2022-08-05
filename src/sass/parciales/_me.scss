@@ -1,0 +1,102 @@
+.sobremiContainer {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+.sobremi{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: #282044;
+    display: grid;
+    place-items: center;
+    &__img{
+        border-radius: 6rem;
+        overflow: hidden;
+        transform: rotate(10deg);
+        transition: all 400ms ease;
+        &:hover{
+            transform: rotate(0);
+        }
+    }
+
+    //CARDS
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    &__card {
+        background: $color-dark;
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        transition: $transition;
+        &:hover{
+            background: $color-ppal;
+            border-color: $color-secu;
+            cursor: default;
+        }
+        > h5 {
+            color: $color-white;
+            font-size: 0.95rem;
+        }
+        > small {
+            color: $color-white;
+            font-size: 0.7 rem;
+        }
+    }
+
+    &__icon {
+        color: $color-white;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.sobremi__content {
+    > p {
+        margin: 2rem 0 2.6rem;
+        font-size: 0.95rem;
+    }
+}
+
+/*
+MEDIAS QUERIES
+*/
+
+@media screen and (max-width: 1024px) {
+    .sobremiContainer {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .sobremi {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+    .sobremi__content {
+        > p {
+            margin: 1rem 0 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sobremi {
+        width: 65%;
+        margin: 0 auto 3rem;
+        &__cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        }
+        &__content {
+            text-align: center;
+            > p {
+                margin: 1.5rem 0;
+            }
+        }
+    }
+}

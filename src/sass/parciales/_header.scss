@@ -1,0 +1,112 @@
+header {
+    padding: 3rem 0 3rem 0;
+    overflow: hidden;
+}
+
+.header__container{
+    height: 100vh;
+
+    h1 {
+        color: #000;
+        font-size: 4rem;
+        margin: 0;
+        line-height: 60px;
+        
+        img {
+            width: 12px;
+        }
+    }
+}
+
+/* ************* CTA ************* */
+.cta{
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* ************* SOCIAL ************* */
+.socialIcons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    position: absolute;
+    left: 6rem;
+    bottom: 19rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+&:after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: #000;
+}
+}
+
+/* ************* ME ************* */
+.me {
+    background: #000;
+    width: 16rem;
+    height: 23rem;
+    left: calc(50% - 11rem);
+    margin: 2rem auto 2rem auto;
+    border-radius: 12rem 12rem  0 0;
+    overflow: hidden;
+    padding: 5rem 1rem 0 1rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 500ms;
+
+}
+
+/* ************* SCROLLDOWN ************* */
+
+.scroll{
+    position: absolute;
+    right: 5rem;
+    bottom: 21rem;
+    transform: rotate(90deg);
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 800ms;
+}
+
+/*
+MEDIAS QUERIES
+*/
+@media (max-width: 768px) {
+    .me{
+        width: 17rem;
+        height: 23rem;
+        margin: 1.2rem auto;
+        padding: 3rem 1rem 0 1rem;
+        border-radius: 12rem 12rem  0 0;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    .header__container{
+        h1 {
+            font-size: 3rem;
+            line-height: 40px;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+    .me{
+        margin: 2rem auto;
+        padding: 2rem 1rem 0 1rem;
+    }
+     
+    .socialIcons {
+        display: none;
+    }
+
+    .scroll {
+        display: none;
+    }
+}
